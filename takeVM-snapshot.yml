@@ -4,4 +4,7 @@
   tasks: 
     - name: take snapshot
 #      ansible.windows.win_command: '"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" snapshot F:\VM\RHEL9.1-1\RHEL9.1-1.vmx backups'
-      ansible.windows.win_command: 'C:\ansible\snapshot.bat'
+#      ansible.windows.win_command: 'C:\ansible\snapshot.bat'
+      ansible.windows.win_powershell:
+        script: |
+          Start-Process -FilePath ‘C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" Snapshot F:\VM\test\test.vmx backup’
