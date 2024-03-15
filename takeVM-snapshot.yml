@@ -5,5 +5,5 @@
     - name: take snapshot
       ansible.windows.win_command:
         argv: 
-        - vmrun.ext
+        - vmrun.exe
         - snapshot F:\VM\RHEL9.1-1\RHEL9.1-1.vmx backup
