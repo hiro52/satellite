@@ -8,4 +8,4 @@
       ansible.windows.win_powershell:
         script: |
 #          'vmrun.exe snapshot  F:\VM\test\test.vmx backup | Invoke-Expression'
-          'vmrun.exe deletesnapshot  F:\VM\test\test.vmx backup | Invoke-Expression'
+          vmrun.exe deletesnapshot  F:\VM\test\test.vmx backup | Invoke-Expression
