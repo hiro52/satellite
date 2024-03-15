@@ -4,4 +4,4 @@
   tasks: 
     - name: take snapshot
       ansible.windows.win_command:
-        cmd: 'vmrun snapshot F:\VM\RHEL9.1-1\RHEL9.1-1.vmx backup'
+        cmd: vmrun 'snapshot F:\VM\RHEL9.1-1\RHEL9.1-1.vmx backup'
