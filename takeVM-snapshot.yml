@@ -6,5 +6,5 @@
 #      ansible.windows.win_command: '"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" snapshot F:\VM\tt\tt.vmx backups'
 #      ansible.windows.win_command: '"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" listsnapshots F:\VM\tt\tt.vmx'
 #      ansible.windows.win_command: 'C:\ansible\snapshot.bat'
-      ansible.windows.win_shell: "powershell -ExecutionPolicy Bypass -File C:\ansible\snapshot.ps1"
+      ansible.windows.win_shell: "powershell -ExecutionPolicy remotesigned -file C:\ansible\snapshot.ps1"
 #        no_profile: true
