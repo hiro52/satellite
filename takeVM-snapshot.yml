@@ -9,4 +9,4 @@
 #      ansible.windows.win_shell: C:\ansible\shapshot.ps1
 #        no_profile: true
       ansible.windows.win_command: 
-        cmd: '"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" snapshot F:\VM\tt\tt.vmx backups'
+        cmd: "C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" snapshot F:\VM\tt\tt.vmx backups
