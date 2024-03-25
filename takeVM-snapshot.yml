@@ -1,12 +1,32 @@
 ---
-- name: Create Snapshot VM by using vmrun command 
+---
+- name: Manage snapshot (Create, Delete, Revert)
   hosts: all
-  tasks: 
-    - name: take snapshot
+  gather_facts: no
+  tasks:
+  - name: change VM snapshot status
+#    community.vmware.vmware_guest_snapshot:
+    vmware_guest_snapshot:
+      hostname: "{{lookup('env', 'VMWARE_HOST')}}"
+      username: "{{lookup('env', 'VMWARE_USER')}}"
+      password: "{{lookup('env', 'VMWARE_PASSWORD')}}"
+      datacenter: DC
+      folder: /DC/vm
+      name: "{{ vmname }}"
+      snapshot_name: backup
+      state: "{{ snap_state }}"
+      validate_certs: no
+    delegate_to: localhost
+
+
+#- name: Create Snapshot VM by using vmrun command for VMware Workstation
+#  hosts: all
+#  tasks: 
+#    - name: take snapshot
 #      ansible.windows.win_command: '"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" snapshot F:\VM\tt\tt.vmx backups'
 #      ansible.windows.win_command: '"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" listsnapshots F:\VM\tt\tt.vmx'
 #      ansible.windows.win_command: 'C:\ansible\snapshot.bat'
 #      ansible.windows.win_shell: C:\ansible\shapshot.ps1
 #        no_profile: true
-      ansible.windows.win_command: 
-        cmd: "C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" snapshot F:\VM\tt\tt.vmx backups
+#      ansible.windows.win_command: 
+#        cmd: "C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" snapshot F:\VM\tt\tt.vmx backups
