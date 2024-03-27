@@ -4,7 +4,7 @@
 
   tasks:
   - name: Manage content view
-      redhat.satellite.content_view_version:
+    redhat.satellite.content_view_version:
       content_view: "CV-RHEL"
       organization: "home_lab"
       version: "18.0"
