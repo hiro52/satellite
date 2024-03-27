@@ -5,11 +5,11 @@
 
   tasks:
   - name: Collect all content view information
-    redhat.satellite.content_view_info:
+    redhat.satellite.host_info:
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"
-      name: CV-RHEL
+      name: "rhel91-dev.lab.local"
       validate_certs: false
       organization: "home_lab"
     register: content_view 
