@@ -6,10 +6,10 @@
   tasks:
   - name: Manage content view
     redhat.satellite.content_view_version:
-      server_url: https://192.168.21.228
-      username: hokano
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
 #      password: "{{lookup('env', 'SATELLITE_PASSWORD')}}"
-      password: "{{ password }}"    
+      password: "{{ satellite_password }}"    
       content_view: "CV-RHEL"
       organization: "home_lab"
       version: "9.0"
