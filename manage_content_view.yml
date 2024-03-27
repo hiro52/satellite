@@ -16,5 +16,5 @@
       force_promote: true
       validate_certs: false
       lifecycle_environments:
-#        - Library
+        - Library
         - Develop
