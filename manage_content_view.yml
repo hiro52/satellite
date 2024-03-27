@@ -5,9 +5,13 @@
   tasks:
   - name: Manage content view
     redhat.satellite.content_view_version:
+      server_url: "{{lookup('env', 'SATELLITE_SERVER_URL')}}"
+      username: "{{lookup('env', 'SATELLITE_USERNAME')}}"
+      password: "{{lookup('env', 'SATELLITE_PASSWORD')}}"    
       content_view: "CV-RHEL"
       organization: "home_lab"
       version: "18.0"
+      validate_certs: false
       lifecycle_environments:
         - Library
         - Develop
