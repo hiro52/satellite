@@ -12,6 +12,7 @@
       content_view: "CV-RHEL"
       organization: "home_lab"
       version: "9.0"
+      force_promote: true
       validate_certs: false
       lifecycle_environments:
         - Library
