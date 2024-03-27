@@ -12,7 +12,7 @@
       password: "{{ satellite_password }}"    
       content_view: "CV-RHEL"
       organization: "home_lab"
-      version: "9.0"
+      version: "{{ cv_version }}"
       force_promote: true
       validate_certs: false
       lifecycle_environments:
