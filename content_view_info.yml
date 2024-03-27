@@ -1,0 +1,8 @@
+---
+- name: Confirm the specific content view infomation
+  hosts: all
+
+  tasks:
+  - name: show all content view information
+    redhat.satellite.content_view_info:
+    
