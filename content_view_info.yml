@@ -12,6 +12,7 @@
       name: CV-RHEL
       validate_certs: false
       organization: "home_lab"
+    register: content_view 
 
   - name: Display content view information
     ansible.builtin.debug:
