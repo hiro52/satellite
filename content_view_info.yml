@@ -14,4 +14,4 @@
 
   - name: Display content view information
     ansible.builtin.debug:
-      msg: "content_view"
+      msg: {{content_view}}
