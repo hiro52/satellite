@@ -8,7 +8,6 @@
     redhat.satellite.content_view_version:
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
-#      password: "{{lookup('env', 'SATELLITE_PASSWORD')}}"
       password: "{{ satellite_password }}"    
       content_view: "CV-RHEL"
       organization: "home_lab"
@@ -19,3 +18,18 @@
         - Library
         - Develop
     when: lifecycle == 'Develop'
+
+  - name: Manage content view
+    redhat.satellite.content_view_version:
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
+      password: "{{ satellite_password }}"    
+      content_view: "CV-RHEL"
+      organization: "home_lab"
+      version: "{{ cv_version }}"
+      force_promote: true
+      validate_certs: false
+      lifecycle_environments:
+        - Test
+        - Production
+    when: lifecycle == 'Production'
