@@ -8,7 +8,8 @@
     redhat.satellite.content_view_info:
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
-      password: "{{ satellite_password }}" 
+      password: "{{ satellite_password }}"
+      name: Develop
       validate_certs: false
       organization: "home_lab"
 
