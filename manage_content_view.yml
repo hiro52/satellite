@@ -18,3 +18,4 @@
       lifecycle_environments:
         - Library
         - Develop
+    when: lifecycle is Develop
