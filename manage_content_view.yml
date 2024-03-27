@@ -1,13 +1,13 @@
 ---
-- name: Manage Content view
+- name: Promote Content view
   hosts: all
 
   tasks:
-  - name: 
-    redhat.satellite.content_view_version:
-    content_view: "CV-RHEL"
-    organization: "home_lab"
-    version: "18.0"
-    lifecycle_environments:
-      - Library
-      - Develop
+  - name: Manage content view
+      redhat.satellite.content_view_version:
+      content_view: "CV-RHEL"
+      organization: "home_lab"
+      version: "18.0"
+      lifecycle_environments:
+        - Library
+        - Develop
