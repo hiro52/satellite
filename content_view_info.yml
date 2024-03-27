@@ -9,7 +9,7 @@
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"
-      name: Develop
+      name: CV-RHEL
       validate_certs: false
       organization: "home_lab"
 
