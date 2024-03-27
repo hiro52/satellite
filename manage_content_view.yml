@@ -18,4 +18,4 @@
       lifecycle_environments:
         - Library
         - Develop
-    when: lifecycle = 'Develop'
+    when: lifecycle == 'Develop'
