@@ -1,6 +1,7 @@
 ---
 - name: Confirm the specific content view infomation
   hosts: all
+  gather_facts: false
 
   tasks:
   - name: Collect all content view information
@@ -8,7 +9,6 @@
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"    
-      content_view: "CV-RHEL"
       organization: "home_lab"
 
   - name: Display content view information
