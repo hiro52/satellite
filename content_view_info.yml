@@ -3,6 +3,14 @@
   hosts: all
 
   tasks:
-  - name: show all content view information
+  - name: Collect all content view information
     redhat.satellite.content_view_info:
-    
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
+      password: "{{ satellite_password }}"    
+      content_view: "CV-RHEL"
+      organization: "home_lab"
+
+  - name: Display content view information
+    ansible.builtin.debug:
+      var: content_views
