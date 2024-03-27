@@ -1,13 +1,14 @@
 ---
 - name: Promote Content view
   hosts: all
+  gather_facts: false
 
   tasks:
   - name: Manage content view
     redhat.satellite.content_view_version:
-      server_url: "{{lookup('env', 'SATELLITE_SERVER_URL')}}"
-      username: "{{lookup('env', 'SATELLITE_USERNAME')}}"
-      password: "{{lookup('env', 'SATELLITE_PASSWORD')}}"    
+      server_url: https://192.168.21.228
+      username: hokano
+      password: "{{ password }}"    
       content_view: "CV-RHEL"
       organization: "home_lab"
       version: "18.0"
