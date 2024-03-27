@@ -1,0 +1,9 @@
+---
+- name: Apply patch to selected hosts group
+  hosts: all
+
+  tasks: 
+  - name: Apply patch
+    ansible.builtin.dnf:
+      
+      
