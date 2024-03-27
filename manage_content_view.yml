@@ -30,6 +30,5 @@
       force_promote: true
       validate_certs: false
       lifecycle_environments:
-        - Test
         - Production
     when: lifecycle == 'Production'
