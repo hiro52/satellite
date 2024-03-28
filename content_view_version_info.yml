@@ -1,2 +1,21 @@
 ---
 - name: Show Specific CV Version Infomation
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - name: Show CV info
+    redhat.satellite.content_view_vertion_info:
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
+      password: "{{ satellite_password }}"
+      content_view: "CV_RHEL"
+      validate_certs: false
+      organization: "home_lab"
+    register: content_view 
+
+  - name: Display content view information
+    ansible.builtin.debug:
+#      msg: "{{ content_view.host.certname }} is Ver {{ content_view.host.content_facet_attributes.content_view_version }}"
+#      var: content_view.host.content_facet_attributes.content_view_environments
+      var: content_view
