@@ -18,4 +18,4 @@
     ansible.builtin.debug:
 #      msg: "{{ content_view.host.certname }} is Ver {{ content_view.host.content_facet_attributes.content_view_version }}"
 #      var: content_view.host.content_facet_attributes.content_view_environments
-      var: content_view
+      var: content_view.content_view_versions[0]
