@@ -5,7 +5,7 @@
 
   tasks:
   - name: Show CV info
-    redhat.satellite.content_view_vertion_info:
+    redhat.satellite.content_view_version_info:
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"
