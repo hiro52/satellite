@@ -1,0 +1,11 @@
+---
+- name: Update RHEL Managed Satellite
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - name: Applying Patches
+    ansible.builtin.dnf:
+      name: '*'
+      state: latest
+  
