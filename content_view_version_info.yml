@@ -16,6 +16,9 @@
 
   - name: Display content view information
     ansible.builtin.debug:
-#      msg: "{{ content_view.host.certname }} is Ver {{ content_view.host.content_facet_attributes.content_view_version }}"
+      msg: "{{ content_view.content_view_versions[0].name }} は {{ ontent_view.content_view_versions[0].description }} です。"
+      msg: "{{ content_view.content_view_versions[1].name }} は {{ ontent_view.content_view_versions[1].description }} です。"
+      msg: "{{ content_view.content_view_versions[2].name }} は {{ ontent_view.content_view_versions[2].description }} です。"
+      msg: "{{ content_view.content_view_versions[3].name }} は {{ ontent_view.content_view_versions[3].description }} です。"
 #      var: content_view.host.content_facet_attributes.content_view_environments
-      var: content_view.content_view_versions[0]
+#      var: content_view.content_view_versions[0]
