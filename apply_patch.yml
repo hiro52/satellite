@@ -1,9 +1,10 @@
 ---
-- name: Apply patch to selected hosts group
+- name: Apply patches to selected hosts group
   hosts: all
+  gather_facts: false
 
-  tasks: 
-  - name: Apply patch
+  tasks:
+  - name: Applying Patches
     ansible.builtin.dnf:
-      
-      
+      name: '*'
+      state: latest
