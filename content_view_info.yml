@@ -16,6 +16,6 @@
 
   - name: Display content view information
     ansible.builtin.debug:
-      var: content_view.host.content_facet_attributes.content_view_environments[lifecycle_environment]
+      var: content_view.host.content_facet_attributes.content_view_environments["lifecycle_environment"]
 #      var: content_view.host.content_facet_attributes.content_view_environments
 #      var: content_view
