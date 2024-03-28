@@ -16,6 +16,6 @@
 
   - name: Display content view information
     ansible.builtin.debug:
-      var: content_view.host.content_facet_attributes.content_view_version
+      msg: "このサーバーのコンテンツビューのバージョンは、{{ content_view.host.content_facet_attributes.content_view_version }} です"
 #      var: content_view.host.content_facet_attributes.content_view_environments
 #      var: content_view
