@@ -1,5 +1,5 @@
 ---
-- name: Update RHEL Managed Satellite
+- name: Apply patches to selected hosts group
   hosts: all
   gather_facts: false
 
