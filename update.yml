@@ -7,5 +7,4 @@
   - name: Applying Patches
     ansible.builtin.dnf:
       name: '*'
-      state: latest
-  
+      state: latest  
