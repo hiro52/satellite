@@ -9,7 +9,7 @@
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"
-      name: "rhel91-dev.lab.local"
+      name: "{{ host_name }}"
       validate_certs: false
       organization: "home_lab"
     register: content_view 
