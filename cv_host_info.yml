@@ -1,0 +1,20 @@
+---
+- name: Confirm the specific content view infomation
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - name: Collect all content view information
+    redhat.satellite.content_export_info:
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
+      password: "{{ satellite_password }}"
+      content_view: "CV-RHEL"
+      destination_server: "rhel91-dev.lab.local"
+      validate_certs: false
+      organization: "home_lab"
+    register: content_view 
+
+  - name: Display content view information
+    ansible.builtin.debug:
+      var: content_view
