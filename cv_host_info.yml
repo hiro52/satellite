@@ -4,15 +4,15 @@
   gather_facts: false
 
   tasks:
-  - name: Collect all content view information
+  - name: "List all exports of a specific content view marked for a specific destination server"
     redhat.satellite.content_export_info:
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"
-      content_view: "CV-RHEL"
+      content_view: CV-RHEL
       destination_server: "rhel91-dev.lab.local"
-      validate_certs: false
       organization: "home_lab"
+      validate_certs: false
     register: content_view 
 
   - name: Display content view information
