@@ -18,19 +18,19 @@
       inclusion: false
 #      state: present
 
-#  - name: Configurate content view filter rule
-#    redhat.satellite.content_view_filter_rule:
-#      server_url: "{{ satellite_url }}"
-#      username: "{{ satellite_user }}"
-#      password: "{{ satellite_password }}"    
-#      validate_certs: false
-#      content_view: "CV-RHEL2"
-#      organization: "home_lab"
-#      content_view_filter: "{{ filter_name }}"
-#      types:
-#        - bugfix
-#        - security
-#        - enhancement
-#      date_type: issued
-#      start_date: "{{ start_date }}"
+  - name: Configurate content view filter rule
+    redhat.satellite.content_view_filter_rule:
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
+      password: "{{ satellite_password }}"    
+      validate_certs: false
+      content_view: "CV-RHEL2"
+      organization: "home_lab"
+      content_view_filter: "{{ filter_name }}"
+      types:
+        - bugfix
+        - security
+        - enhancement
+      date_type: issued
+      start_date: "{{ start_date }}"
 #      state: present
