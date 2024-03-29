@@ -17,6 +17,7 @@
       filter_type: erratum
       inclusion: false
       state: present
+      name: test
 
 #  - name: Configurate content view filter rule
 #    redhat.satellite.content_view_filter_rule:
