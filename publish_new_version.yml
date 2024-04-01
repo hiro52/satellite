@@ -55,5 +55,6 @@
       validate_certs: false
       content_view: "CV-RHEL2"
       organization: "home_lab"
+      filter_type: erratum
       name: "{{ filter_name }}"
       state: absent
