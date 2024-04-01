@@ -45,3 +45,15 @@
         satellite_validate_certs: false
         satellite_content_views:
           - CV-RHEL2
+
+  tasks:
+  - name: Create content view filter
+    redhat.satellite.content_view_filter:
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
+      password: "{{ satellite_password }}"    
+      validate_certs: false
+      content_view: "CV-RHEL2"
+      organization: "home_lab"
+      name: "{{ filter_name }}"
+      state: absent
