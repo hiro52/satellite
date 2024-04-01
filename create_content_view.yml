@@ -12,7 +12,6 @@
       validate_certs: false
       name: "CV-RHEL2"
       organization: "home_lab"
-      auto_publish: true
       description: "for Demo"
       repositories:
         - name: 'Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9'
