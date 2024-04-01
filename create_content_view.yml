@@ -12,6 +12,8 @@
       validate_certs: false
       name: "CV-RHEL2"
       organization: "home_lab"
+      auto_publish: true
+      description: "RHEL 9.1 First Release（2022-11-14）"
       repositories:
         - name: 'Red Hat Enterprise Linux 9 for x86_64 - AppStream RPMs 9'
           product: 'Red Hat Enterprise Linux for x86_64'
