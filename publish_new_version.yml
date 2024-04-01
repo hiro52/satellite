@@ -38,10 +38,10 @@
   roles:
     - role: redhat.satellite.content_view_publish
       vars:
-        satellite_server_url: "{{ satellite_url }}"
-        satellite_username: "{{ satellite_user }}"
-        satellite_password: "{{ satellite_password }}"
-        satellite_organization: "home_lab"
+        foreman_server_url: "{{ satellite_url }}"
+        foreman_username: "{{ satellite_user }}"
+        foreman_password: "{{ satellite_password }}"
+        foreman_organization: "home_lab"
         validate_certs: false
-        satellite_content_views:
+        foreman_content_views:
           - CV-RHEL2
