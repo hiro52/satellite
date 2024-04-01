@@ -1,4 +1,8 @@
 ---
+- name: Show Specific CV Version Infomation
+  hosts: all
+  gather_facts: false
+  
 - name: Create Content View
   tasks:
   - name: Create content view
