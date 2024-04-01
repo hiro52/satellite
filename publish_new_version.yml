@@ -39,8 +39,8 @@
     - role: redhat.satellite.content_view_publish
       vars:
         satellite_server_url: https://192.168.21.228/
-        username: "{{ satellite_user }}"
-        password: "{{ satellite_password }}"
+        satellite_username: "{{ satellite_user }}"
+        satellite_password: "{{ satellite_password }}"
         satellite_organization: "home_lab"
         validate_certs: false
         satellite_content_views:
