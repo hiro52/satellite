@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: false
 
-  pre_tasks:
+  tasks:
   - name: Create content view filter
     redhat.satellite.content_view_filter:
       server_url: "{{ satellite_url }}"
@@ -35,19 +35,16 @@
       start_date: "{{ start_date }}"
 #      state: present
 
-  roles:
-    - role: redhat.satellite.content_view_publish
-      vars:
-        satellite_server_url: "{{ satellite_url }}"
-        satellite_username: "{{ satellite_user }}"
-        satellite_password: "{{ satellite_password }}"
-        satellite_organization: "home_lab"
-        satellite_validate_certs: false
-        description: "{{ comment }}"
-        satellite_content_views:
-          - CV-RHEL2
+  - name: Publish New Version
+    redhat.satellite.content_view_version:
+      server_url: "{{ satellite_url }}"
+      username: "{{ satellite_user }}"
+      password: "{{ satellite_password }}"    
+      validate_certs: false
+      description: "comment_eng"
+      content_view: "CV-RHEL2"
+      organization: "home_lab"
 
-  post_tasks:
   - name: Remove content view filter
     redhat.satellite.content_view_filter:
       server_url: "{{ satellite_url }}"
