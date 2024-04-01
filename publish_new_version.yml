@@ -38,9 +38,9 @@
   roles:
     - role: redhat.satellite.content_view_publish
       vars:
-        foreman_server_url: "{{ satellite_url }}"
-        foreman_username: "{{ satellite_user }}"
-        foreman_password: "{{ satellite_password }}"
+        server_url: "{{ satellite_url }}"
+        username: "{{ satellite_user }}"
+        password: "{{ satellite_password }}"
         satellite_organization: "home_lab"
         validate_certs: false
         satellite_content_views:
