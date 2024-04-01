@@ -58,4 +58,4 @@
       organization: "home_lab"
       filter_type: erratum
       name: "{{ filter_name }}"
-      rule_state: absent
+      filter_state: absent
