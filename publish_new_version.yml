@@ -48,7 +48,7 @@
           - CV-RHEL2
 
   post_tasks:
-  - name: Create content view filter
+  - name: Remove content view filter
     redhat.satellite.content_view_filter:
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
