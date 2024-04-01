@@ -34,3 +34,13 @@
       date_type: issued
       start_date: "{{ start_date }}"
 #      state: present
+
+  roles:
+    - role: redhat.satellite.content_view_publish
+      vars:
+        satellite_server_url: "{{ satellite_url }}"
+        satellite_username: "{{ satellite_user }}"
+        satellite_password: "{{ satellite_password }}"
+        satellite_organization: "home_lab"
+        satellite_content_views:
+          - CV-RHEL2
