@@ -3,7 +3,6 @@
   hosts: all
   gather_facts: false
   
-- name: Create Content View
   tasks:
   - name: Create content view
     redhat.satellite.content_view:
