@@ -41,7 +41,7 @@
         foreman_server_url: "{{ satellite_url }}"
         foreman_username: "{{ satellite_user }}"
         foreman_password: "{{ satellite_password }}"
-        foreman_organization: "home_lab"
+        satellite_organization: "home_lab"
         validate_certs: false
         satellite_content_views:
           - CV-RHEL2
