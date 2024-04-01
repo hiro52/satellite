@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: false
 
-  tasks:
+  pre_tasks:
   - name: Create content view filter
     redhat.satellite.content_view_filter:
       server_url: "{{ satellite_url }}"
@@ -46,7 +46,7 @@
         satellite_content_views:
           - CV-RHEL2
 
-  tasks:
+  post_tasks:
   - name: Create content view filter
     redhat.satellite.content_view_filter:
       server_url: "{{ satellite_url }}"
