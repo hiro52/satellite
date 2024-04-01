@@ -42,5 +42,6 @@
         satellite_username: "{{ satellite_user }}"
         satellite_password: "{{ satellite_password }}"
         satellite_organization: "home_lab"
+        validate_certs: false
         satellite_content_views:
           - CV-RHEL2
