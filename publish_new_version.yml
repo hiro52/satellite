@@ -36,7 +36,7 @@
 #      state: present
 
   roles:
-    - role: redhat.satellite.content_view_publish
+    - roles: redhat.satellite.content_view_publish
       vars:
         server_url: https://192.168.21.228/
         username: "{{ satellite_user }}"
