@@ -43,5 +43,5 @@
         foreman_password: "{{ satellite_password }}"
         foreman_organization: "home_lab"
         validate_certs: false
-        foreman_content_views:
+        satellite_content_views:
           - CV-RHEL2
