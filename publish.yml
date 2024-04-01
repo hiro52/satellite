@@ -10,5 +10,6 @@
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"    
       validate_certs: false
+      description: "RHEL 9.1 First Release(2022-11-14)"
       content_view: "CV-RHEL2"
       organization: "home_lab"
