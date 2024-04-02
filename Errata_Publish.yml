@@ -18,16 +18,16 @@
       filter_type: erratum
       inclusion: true
 
-  - name: Configurate content view filter rule
-    redhat.satellite.content_view_filter_rule:
-      server_url: "{{ satellite_url }}"
-      username: "{{ satellite_user }}"
-      password: "{{ satellite_password }}"    
-      validate_certs: false
-      content_view: "{{ content_view }}"
-      organization: "home_lab"
-      content_view_filter: "{{ filter_name }}"
-      errata_id: "{{ errata_id }}"
+#  - name: Configurate content view filter rule
+#    redhat.satellite.content_view_filter_rule:
+#      server_url: "{{ satellite_url }}"
+#      username: "{{ satellite_user }}"
+#      password: "{{ satellite_password }}"    
+#      validate_certs: false
+#      content_view: "{{ content_view }}"
+#      organization: "home_lab"
+#      content_view_filter: "{{ filter_name }}"
+#      errata_id: "{{ errata_id }}"
 
 #  - name: Publish New Version
 #    redhat.satellite.content_view_version:
