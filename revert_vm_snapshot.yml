@@ -1,0 +1,19 @@
+---
+- name: Manage snapshot (Create, Delete, Revert)
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: change VM snapshot status
+#    community.vmware.vmware_guest_snapshot:
+    vmware_guest_snapshot:
+      hostname: "{{lookup('env', 'VMWARE_HOST')}}"
+      username: "{{lookup('env', 'VMWARE_USER')}}"
+      password: "{{lookup('env', 'VMWARE_PASSWORD')}}"
+      datacenter: DC
+      folder: /DC/vm
+      name: "{{ vmname }}"
+      snapshot_name: "For WF Test"
+      state: revert
+      memory_dump: true
+      validate_certs: no
+    delegate_to: localhost
