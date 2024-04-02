@@ -13,6 +13,7 @@
       content_view: "{{ content_view }}"
       organization: "home_lab"
       name: "{{ filter_name }}"
+      errata_id: "{{ errata_id }}"
 #      description: "{{ comment }}"
       filter_type: erratum
       inclusion: true
