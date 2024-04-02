@@ -26,6 +26,7 @@
       content_view: "{{ content_view }}"
       organization: "home_lab"
       content_view_filter: "{{ filter_name }}"
+      name: "{{ filter_name }}"
       errata_id: "{{ errata_id }}"
 
 #  - name: Publish New Version
