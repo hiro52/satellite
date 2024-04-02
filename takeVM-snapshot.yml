@@ -1,5 +1,4 @@
 ---
----
 - name: Manage snapshot (Create, Delete, Revert)
   hosts: all
   gather_facts: no
