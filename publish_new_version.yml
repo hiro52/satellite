@@ -15,7 +15,7 @@
       name: "{{ filter_name }}"
       description: "{{ comment }}"
       filter_type: erratum
-      inclusion: false
+      inclusion: true
 #      state: present
 
   - name: Configurate content view filter rule
