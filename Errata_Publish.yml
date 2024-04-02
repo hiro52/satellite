@@ -15,7 +15,7 @@
       name: "{{ filter_name }}"
 #      description: "{{ comment }}"
       filter_type: erratum
-      inclusion: false
+      inclusion: true
 
 #  - name: Configurate content view filter rule
 #    redhat.satellite.content_view_filter_rule:
