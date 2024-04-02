@@ -13,7 +13,7 @@
       content_view: "{{ content_view }}"
       organization: "home_lab"
       name: "{{ filter_name }}"
-      description: "{{ comment }}"
+#      description: "{{ comment }}"
       filter_type: erratum
       inclusion: true
 
