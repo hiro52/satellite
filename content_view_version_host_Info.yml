@@ -9,7 +9,7 @@
       server_url: "{{ satellite_url }}"
       username: "{{ satellite_user }}"
       password: "{{ satellite_password }}"
-      content_view: "CV-RHEL"
+      content_view: "CV-RHEL2"
       validate_certs: false
       organization: "home_lab"
     register: content_view 
